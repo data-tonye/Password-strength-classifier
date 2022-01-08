@@ -13,7 +13,7 @@ from urllib.error import URLError
 
 
 def load_data():
-    data = 'https://raw.githubusercontent.com/data-tonye/Password-strength-classifier/main/data.csv'
+    data = '/content/drive/MyDrive/Exercise data/data.csv'
     df = pd.read_csv(data, error_bad_lines = False)
     df.dropna(inplace=True)
     return df
@@ -56,9 +56,8 @@ dt = np.array([text_input])
 pred = vectorizer.transform(dt)
 result = clf.predict(pred)
 
-if submit_button:
-    x
-'''try:
+
+try:
     if submit_button:
         if result[0] == 0:
             st.write('Weak password!')
@@ -73,4 +72,4 @@ except URLError as e:
         Connection error: %s
         """
         % e.reason
-    )'''
+    )
