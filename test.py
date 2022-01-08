@@ -14,8 +14,10 @@ from urllib.error import URLError
 
 
 def load_data():
-    data = "https://drive.google.com/uc?export=download&id=19XHbRlvcq2svrpUobxbtnIK8_pF95Ck9"
+    ## "https://drive.google.com/uc?export=download&id=19XHbRlvcq2svrpUobxbtnIK8_pF95Ck9"
+    data = "https://raw.githubusercontent.com/data-tonye/Password-strength-classifier/main/data.csv"
     df = pd.read_csv(data, error_bad_lines = False)
+    df = df.drop(columns = ['Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5',	'Unnamed: 6'])
     df.dropna(inplace=True)
     return df
 
