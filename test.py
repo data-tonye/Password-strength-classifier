@@ -13,7 +13,7 @@ from urllib.error import URLError
 
 
 def load_data():
-    data = "https://github.com/data-tonye/Password-strength-classifier/blob/main/data.csv"
+    data = "data.csv"
     df = pd.read_csv(data, error_bad_lines = False)
     df.dropna(inplace=True)
     return df
