@@ -13,8 +13,7 @@ from urllib.error import URLError
 
 
 def load_data():
-    data = "data.csv"
-    df = pd.read_csv(data, error_bad_lines = False)
+    df = pd.read_csv('data.csv', error_bad_lines = False)
     df.dropna(inplace=True)
     return df
 
