@@ -57,20 +57,18 @@ pred = vectorizer.transform(dt)
 result = clf.predict(pred)
 
 try:
-
-        if submit_button:
-            if result[0] == 0:
-                st.write('Weak password!')
-            elif result[0] == 1:
+    if submit_button:
+        if result[0] == 0:
+            st.write('Weak password!')
+        elif result[0] == 1:
                 st.write('Average password!')
-            else:
-                st.write('Strong password!')
+    else:
+        st.write('Strong password!')
 except URLError as e:
     st.error(
         """
         **This demo requires internet access.**
-
         Connection error: %s
-    """
+        """
         % e.reason
     )
