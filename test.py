@@ -56,7 +56,9 @@ dt = np.array([text_input])
 pred = vectorizer.transform(dt)
 result = clf.predict(pred)
 
-try:
+if submit_button:
+    x
+'''try:
     if submit_button:
         if result[0] == 0:
             st.write('Weak password!')
@@ -71,4 +73,4 @@ except URLError as e:
         Connection error: %s
         """
         % e.reason
-    )
+    )'''
