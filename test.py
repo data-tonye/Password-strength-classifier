@@ -13,7 +13,7 @@ from urllib.error import URLError
 
 
 def load_data():
-    data = 'https://drive.google.com/file/d/19XHbRlvcq2svrpUobxbtnIK8_pF95Ck9/view?usp=sharing'
+    data = 'https://drive.google.com/files/content/drive/MyDrive/Exercise data/data.csv'
     df = pd.read_csv(data, error_bad_lines = False)
     df.dropna(inplace=True)
     return df
